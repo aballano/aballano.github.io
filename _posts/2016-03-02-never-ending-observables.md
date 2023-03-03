@@ -1,12 +1,23 @@
 ---
 layout: post
 title: Dealing with RxJava's never-ending Observables
+categories:
+  - Rxjava
+  - Testing
+  - Android
+  - Software Development
+published: false
+---
+---
+layout: post
+title: Dealing with RxJava's never-ending Observables
 categories: [Rxjava, Testing, Android, Software Development]
 ---
 
 ## Dealing with RxJava's never-ending Observables
 
 Never-ending Observables are those that observe some data indefinitely until you unsubscribe from them. They're quite useful in many situations, specially when dealing with databases as you can observe emissions from a specific table, for example. A good example of this is [SqlBrite](https://github.com/square/sqlbrite).
+
 When using this kind of observables we need to take care on which operators to use on them since you might run into problems. This is specially dangerous if you, for example, want to migrate DB query using Single to an Observable, because the operators don't always work the same way…
 
 
@@ -23,10 +34,13 @@ Now a typical test could be as following:
 
 
 **Now is QUIZZ time! What will this test output?**
-a) Success
-b) Failure
+
+1. Success
+2. Failure
+
 
 ---
+
 
 ### The problem
 
@@ -128,5 +142,10 @@ Hope you liked or learned something new with this article, if so please hit the 
 Thanks for reading!
 
 
+> This post was migrated from [Medium](https://tech.new-work.se/dealing-with-rxjavas-never-ending-observables-1ca8f18797ff)
+
+
+---
+
+
 [^1]: This can be solved in other ways, but this example is shown here for simplicity purposes.
-[^note]: This post was migrated from [Medium](https://tech.new-work.se/dealing-with-rxjavas-never-ending-observables-1ca8f18797ff)
