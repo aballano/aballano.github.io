@@ -78,13 +78,13 @@ when {
 
 Ok, so 5 lines in our new shiny class and we're already crashing for a case that "should never happen", not too good :(
 
-## But this won't happen in a real case scenario!
+> But this won't happen in a real case scenario!
 
 Yes, we "all" know, right? Still, this implementation (and probably the tests too)  **tells a different story**. What do you think will happen when a new person in your team reads this code? Are you gonna start explaining all occurrences of this kind of solution as part of the onboarding plan?
 
 There's an apparent  **mismatch about what the real specification is and what the code is doing**, and that leads to potential errors that "should never happen", although they sometimes do, and to useless boilerplate code or exceptions thrown meant to cover this lack of boundaries of your system.
 
-## Defining your program boundaries
+### Defining your program boundaries
 
 Some of you might have be thinking of the perfect Kotlin tool to solve this issue, and for the ones that didn't yet, let's try to put that thought in your brain :)
 
@@ -113,10 +113,13 @@ fun init(userData: UserData) {
     _showUserInfo_(validUser)  
 }
 ```
+
+---
+
 And we're done! Not only we managed to remove the else case, but we also made our code more bulletproof and readable.
 
 Hope you enjoyed the article, feel free to send suggestions or comments via social networks below!.
 
 Happy coding!
 
-P.S. Thanks [pablisco](https://medium.com/u/b276785d55d2?source=post_page-----cd7c40974078--------------------------------) for proofreading the article.
+P.S. Thanks [pablisco](https://twitter.com/pablisc0) for proofreading the article.
