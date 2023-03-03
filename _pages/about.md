@@ -4,26 +4,16 @@ title: About
 permalink: /about/
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+My name is Alberto Ballano, and I've been working as an Android developer since 2011 for different companies (@xing_de, former @47deg, @travelperk, @spotify) and some time as a freelancer for some popular German newspaper apps.
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+Apart from programming I also like gaming a lot, which ended up on getting into the gamedev world a bit with different engines such as old GameMaker, Godot and Unity. 
 
-## Features
+I like experimenting a lot and doing a lot of different small games to try out things or learn new patterns, so I'll try to post some here as well.
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
+I've used to write more often about my experiences, learnings and failures in the past, and sometimes it can help someone else get an idea or solve a similar problem, so I'd like to continue doing so. Also, it's quite good for keeping a personal record of projects and ideas!
 
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+Hope you like the content, feel free to reach me on social media :)
+
+
+
+Powered using [Reverie](https://github.com/amitmerchant1990/reverie)

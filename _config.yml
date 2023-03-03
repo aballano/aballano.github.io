@@ -26,14 +26,14 @@ footer-links:
   flickr:
   github: aballano
   instagram:
-  linkedin: 
+  linkedin: alberto-ballano-94557394
   pinterest:
   rss: rss
   twitter: aballano
   stackoverflow: 
   youtube: # channel/<your_long_string> or user/<user-name>
   playconsole:
-  mastodon: # <your-mastodon-instance>/@<your-user-name> eg. fosstodon.org/@username
+  mastodon: androiddev.social/@aballano
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
