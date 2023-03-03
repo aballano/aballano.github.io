@@ -6,7 +6,7 @@ categories:
   - Testing
   - Android
   - Software Development
-published: false
+published: true
 ---
 ---
 layout: post
