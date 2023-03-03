@@ -9,7 +9,7 @@ categories:
 published: true
 ---
 
-![](https://raw.githubusercontent.com/aballano/aballano.github.io/master/images/2016-03-02-never-ending-observables_1.webp "A never ending Observable diagram")
+![](https://raw.githubusercontent.com/aballano/aballano.github.io/master/images/2016-03-02-never-ending-observables.webp "A never ending Observable diagram")
 
 ---
 
