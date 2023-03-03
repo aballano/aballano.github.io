@@ -13,6 +13,8 @@ published: true
 
 ## Dealing with RxJava's never-ending Observables
 
+---
+
 Never-ending Observables are those that observe some data indefinitely until you unsubscribe from them. They're quite useful in many situations, specially when dealing with databases as you can observe emissions from a specific table, for example. A good example of this is [SqlBrite](https://github.com/square/sqlbrite).
 
 When using this kind of observables we need to take care on which operators to use on them since you might run into problems. This is specially dangerous if you, for example, want to migrate DB query using Single to an Observable, because the operators don't always work the same way…
