@@ -5,6 +5,7 @@ categories:
   - Rxjava
   - Testing
   - Android
+  - Kotlin
   - Software Development
 published: true
 ---
