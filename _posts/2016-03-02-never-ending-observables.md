@@ -8,11 +8,8 @@ categories:
   - Software Development
 published: true
 ---
----
-layout: post
-title: Dealing with RxJava's never-ending Observables
-categories: [Rxjava, Testing, Android, Software Development]
----
+
+![](https://raw.githubusercontent.com/aballano/aballano.github.io/master/images/2016-03-02-never-ending-observables_1.webp "A never ending Observable diagram")
 
 ## Dealing with RxJava's never-ending Observables
 
