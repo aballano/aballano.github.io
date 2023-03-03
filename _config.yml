@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: aballano
+name: aballano's site
 
 # Name of the author
 author: Alberto Ballano
@@ -98,4 +98,3 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-
