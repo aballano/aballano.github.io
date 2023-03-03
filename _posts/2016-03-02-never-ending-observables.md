@@ -11,8 +11,6 @@ published: true
 
 ![](https://raw.githubusercontent.com/aballano/aballano.github.io/master/images/2016-03-02-never-ending-observables_1.webp "A never ending Observable diagram")
 
-## Dealing with RxJava's never-ending Observables
-
 ---
 
 Never-ending Observables are those that observe some data indefinitely until you unsubscribe from them. They're quite useful in many situations, specially when dealing with databases as you can observe emissions from a specific table, for example. A good example of this is [SqlBrite](https://github.com/square/sqlbrite).
