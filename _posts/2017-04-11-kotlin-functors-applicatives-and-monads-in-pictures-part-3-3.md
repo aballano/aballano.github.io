@@ -8,7 +8,7 @@ categories:
   - Applicative
   - Kotlin
   - Software Development
-published: false
+published: true
 ---
 
 First of all, if you didn’t read the previous posts, go do so, otherwise you might be missing some essential concepts!
