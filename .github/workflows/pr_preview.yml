@@ -16,11 +16,8 @@ jobs:
           source-dir: './_site'
       - name: Output the deployment URL
         run: echo "URL ${{ steps.deploy.outputs.url }}"
-      - name: Output the deployment URL in a comment on the pull request
-        uses: actions/github-script@0.3.0
-        if: github.event_name == 'pull_request'
+      - name: Comment Pull Request
+        uses: thollander/actions-comment-pull-request@v2.3.1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
-            github.issues.createComment({ issue_number, owner, repo, body: 'URL ready:  ${{ steps.deploy.outputs.url }}' });
+          message: |
+            'URL ready:  ${{ steps.deploy.outputs.url }}'
