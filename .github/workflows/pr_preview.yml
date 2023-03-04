@@ -1,0 +1,26 @@
+name: Pull request site preview
+on: [pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: Deploy via GoStatic
+        id: deploy
+        uses: DigitalSVN/GoStatic@v1.0
+        with:
+          api-token: ${{ secrets.GOSTATIC_API_TOKEN }}
+          source-dir: './_site'
+      - name: Output the deployment URL
+        run: echo "URL ${{ steps.deploy.outputs.url }}"
+      - name: Output the deployment URL in a comment on the pull request
+        uses: actions/github-script@0.3.0
+        if: github.event_name == 'pull_request'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
+            github.issues.createComment({ issue_number, owner, repo, body: 'URL ready:  ${{ steps.deploy.outputs.url }}' });
