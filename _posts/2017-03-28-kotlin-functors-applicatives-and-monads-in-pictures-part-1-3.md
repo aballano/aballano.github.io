@@ -11,7 +11,7 @@ categories:
 published: true
 ---
 
->> _This is a translation of_ [_Functors, Applicatives, And Monads In Pictures_](http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html) _from_ [_Haskell_](https://www.haskell.org/) _into_ [_Kotlin_](https://hackernoon.com/tagged/kotlin)_._
+>> _This is a translation of_ [_Functors, Applicatives, And Monads In Pictures_](http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html) _from_ [_Haskell_](https://www.haskell.org/).
 
 > _Actually this is a translation of_ [_another translation from Haskell to Swift_](http://www.mokacoding.com/blog/functor-applicative-monads-in-pictures/)_._
 
@@ -37,13 +37,14 @@ Simple enough. Lets extend this by saying that any value can be in a context. Fo
 
 Now when you apply a function to this value, you’ll get different results **depending on the context**. This is the idea that Functors, Applicatives, Monads, Arrows etc are all based on. The `Option` data type defines two related contexts:
 
-> **_Note:_** _the pictures use Maybe (Just | None) from Haskell, which correspond to a custom Kotlin’s_ Option _(Some | None) implementation._
+> **_Note:_** the pictures use Maybe (Just | None) from Haskell, which correspond to a custom Kotlin’s Option (Some | None) implementation.
 
 ![](https://cdn-images-1.medium.com/max/800/0*1NCb7mGijOSflxhO.png)
 ```kotlin
 sealed class Option<out A> {  
   object None : Option<Nothing>()  
-  data class Some<out A>(val value: A) : Option<A>()`   }`
+  data class Some<out A>(val value: A) : Option<A>()
+}
 ```
 In a second we will see how function application is different when something is a `Some(T)`versus a `None`. First let’s talk about [Functors](https://hackernoon.com/tagged/functors)!
 
@@ -72,7 +73,9 @@ A Functor is any type that defines how `map` (`fmap` in Haskell) applies to it. 
 
 So we can do this:
 
-    Option.Some(2).map { it + 3 }
+```kotlin
+Option.Some(2).map { it + 3 }
+```
 
 And `map` magically applies this function, because `Option` is a Functor. It specifies how `map` applies to `Some`s and `None`s:
 ```kotlin
@@ -81,8 +84,10 @@ inline fun <B> map(f: (A) -> B): Option<B> = when (this) {
     is Some -> Some(f(value))  
 }
 ```
-Here’s what is happening behind the scenes when we write `Option.Some(2).map { it + 3 }`:
-
+Here’s what is happening behind the scenes when we write the above
+```kotlin
+Option.Some(2).map { it + 3 }
+```
 ![](https://cdn-images-1.medium.com/max/800/0*2ePtQNke8BGZT5MN.png)
 
 So then you’re like, alright `map`, please apply `{ it + 3 }` to a `None`?
@@ -117,7 +122,7 @@ inline infix fun <B> map(f: (A) -> B): Option<B> { ... }
 _findPost_(1) map ::getPostTitle
 ```
 
-> **_Note:_** _we have to use just_ `_map_` _because_ `_<$>_` _wouldn't compile. Another option would be to override a common operator like_ `_/_` _or_ `_*_`
+> **_Note:_** _we have to use just_ `map` _because_ `<$>` _wouldn't compile. Another option would be to override a common operator like_ `/` _or_ `*`
 
 Here’s another example: what happens when you apply a function to an array?
 
@@ -146,9 +151,9 @@ Here’s a function applied to another function:
 ![](https://cdn-images-1.medium.com/max/800/0*kKizWpvf5xsrDDaj.png)
 
 The result is just another function!
-
-    typealias IntFunction = (Int) -> Int
-
+```kotlin
+typealias IntFunction = (Int) -> Int
+```
 So functions can be Functors too! When you use `map` on a function, you’re just doing function composition!
 
 #### Well, that's it for today, I hope you got the idea about what's a Functor. Since the original post was pretty long, I'll continue in the next series with Applicatives. Now go try write some Functors in Kotlin!
@@ -157,7 +162,7 @@ So functions can be Functors too! When you use `map` on a function, you’re jus
 
 Want more? Go try applicatives in the second part!
 
-[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 2/3**](https://aballano.github.io/kotlin-functors-applicatives-and-monads-in-pictures-part-2-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
+[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 2/3**](./kotlin-functors-applicatives-and-monads-in-pictures-part-2-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
 
 [![](https://cdn-images-1.medium.com/max/400/1*0hqOaABQ7XGPT-OYNgiUBg.png)](http://bit.ly/HackernoonFB)
 

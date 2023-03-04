@@ -13,9 +13,9 @@ published: true
 
 First of all, if you didn’t read the previous posts, go do so, otherwise you might be missing some essential concepts!
 
-[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 1/3**](https://aballano.github.io/kotlin-functors-applicatives-and-monads-in-pictures-part-1-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
+[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 1/3**](./kotlin-functors-applicatives-and-monads-in-pictures-part-1-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
 
-[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 2/3**](https://aballano.github.io/kotlin-functors-applicatives-and-monads-in-pictures-part-2-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
+[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 2/3**](./kotlin-functors-applicatives-and-monads-in-pictures-part-2-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
 
 ### Monads
 
@@ -38,12 +38,12 @@ Monads apply a function that returns a wrapped value to a wrapped value. Monads 
 
 ```kotlin
 inline fun <B> flatMap(f: (A) -> Option<B>): Option<B> =   
-when (this) {  
-    is None -> this  
-    is Some -> f(value)  
-}
+    when (this) {  
+        is None -> this  
+        is Some -> f(value)  
+    }
 ```
-Let’s see an example. Good ol’ Option is a monad:
+Let’s see an example. Good old Option (`Maybe` in Haskell) is a monad:
 
 ![](https://cdn-images-1.medium.com/max/800/0*kdpByXzPXXNgJ4v8.png)
 
@@ -77,7 +77,10 @@ None.flatMap(::half)
 ```
 What’s happening inside? Let’s look at `flatMap`'s (`>>=` in Haskell) signature again:
 
-    // For Option
+```kotlin
+// For Option
+inline fun <B> flatMap(f: (A) -> Option<B>): Option<B>
+```
 
 ![](https://cdn-images-1.medium.com/max/800/0*G8_Zuhcn94-9OR0Z.png)
 
@@ -91,8 +94,10 @@ And if you pass in a `None` it’s even simpler:
 
 You can also chain these calls (by using an infix version of `flatMap`):
 
+```kotlin
 Some(20) flatMap ::half flatMap ::half flatMap ::half  
 // => None
+```
 
 ![](https://cdn-images-1.medium.com/max/800/0*N-dZjxCsHwnK_KlT.png)
 

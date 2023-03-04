@@ -13,7 +13,7 @@ published: true
 
 First of all, if you didn't read the previous post, go do so, otherwise you might be missing some essential concepts!
 
-[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 1/3**](https://aballano.github.io/kotlin-functors-applicatives-and-monads-in-pictures-part-1-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
+[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 1/3**](./kotlin-functors-applicatives-and-monads-in-pictures-part-1-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
 
 ### Applicatives
 
@@ -28,29 +28,27 @@ But our functions are wrapped in a context too!
 Yeah. Let that sink in. Applicatives don’t kid around. Unlike Haskell, [Kotlin](https://hackernoon.com/tagged/kotlin) doesn’t have _yet_ a built-in way to deal with Applicatives. But it is very easy to add one! We can define an `apply` function for every type supporting Applicative, which knows how to apply a function wrapped in the context of the type to a value wrapped in the same context:
 ```kotlin
 infix fun <A, B> Option<(A) -> B>.apply(f: Option<A>): Option<B> =  
-        when (this) {  
-            is Option.None -> Option.None  
-            is Option.Some -> f.map(this.value)  
-        }
+    when (this) {  
+        is Option.None -> Option.None  
+        is Option.Some -> f.map(this.value)  
+    }
 
 infix inline fun <A, reified B> Array<(A) -> B>.apply(a: Array<A>) =  
-        Array(this.size \* a.size) {  
-            this\[it / a.size\](a\[it % a.size\])  
-        }
+    Array(this.size * a.size) {  
+        this[it / a.size](a[it % a.size])  
+    }
 ```
 If both `this` and the function are `Some`, then the function is applied to the unwrapped option, otherwise `None` is returned.
 
 For the `Array` I'm using its constructor parameters to generate the array, although note that this wouldn't be the most performant choice for bigger arrays.
 
-> **Note:** this would be the`<*>` in Haskell, so again we could use a `*` operator if needed.
+> **Note:** this would be the `<*>` in Haskell, so again we could use a `*` operator if needed.
 
 ![](https://cdn-images-1.medium.com/max/800/0*YZDbwqs5Vxy-ldbA.png)
 
 ```kotlin
 Some({ a: Int -> a + 3 }) apply Some(2)`   // => Some(5)`
 ```
-
----
 
 If you look carefully you will see that our operator only works in this specific order: `Option(function) apply Option(value)` why? Because our extension function is defined in that order. Then, couldn’t I just make another extension function to work the other way around, like:
 
@@ -59,13 +57,14 @@ fun <A, B> Option<A>.`apply`(o: Option<(A) -> B>) = {...}
 fun <A, B> Option<(A) -> B>.`apply`(o: Option<A>) = {...}
 ```
 
-Technically not. Since Kotlin produces same code as Java would, it has to deal with our friend the [type erasure](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html). So basically those 2 functions would loose the generic types at compile time (and become just `Option`), making them equal and therefore invalid. But here’s a trick, we could use a so called `dummyImplicit` (and you can read why [here](http://stackoverflow.com/questions/34745066/dummyimplicits-is-this-used-and-how/34746255?stw=2#34746255)) so it would look like:
+Technically not. Since Kotlin produces same code as Java would, it has to deal with our friend the [type erasure](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html). So basically those 2 functions would loose the generic types at compile time (and become just `Option`), making them equal and therefore invalid. But here’s a trick, we could use a so called `dummy` (and you can read why [here](http://stackoverflow.com/questions/34745066/dummyimplicits-is-this-used-and-how/34746255?stw=2#34746255)) so it would look like:
 
 ```kotlin
-fun <A, B> Option<A>.apply(f: Option<(A) -> B>, dummyImplicit: Any? = null): Option<B> =   
+fun <A, B> Option<A>.apply(f: Option<(A) -> B>, dummy: Any? = null): Option<B> =
     when (this) {  
         is Option.None -> Option.None  
-        is Option.Some -> f.map { it(value) }}
+        is Option.Some -> f.map { it(value) }
+    }
 ```
 
 This allows us to do:
@@ -88,11 +87,9 @@ arrayOf<(Int) -> Int>({ it + 3 }, { it * 2 }) _apply_ arrayOf(1, 2, 3)  // => [ 
 
 Here’s something you can do with Applicatives that you can’t do with Functors. How do you apply a function that takes two arguments to two wrapped values?
 ```kotlin
-fun curriedAddition(a: Int) = { b: Int ->  
-    a + b  
-}
+fun curriedAddition(a: Int) = { b: Int -> a + b }
 
-Some(3) map ::curriedAddition map Some(2)`   // => COMPILER ERROR`
+Some(3) map ::curriedAddition map Some(2)   // => COMPILER ERROR`
 ```
 Applicatives:
 ```kotlin
@@ -134,7 +131,7 @@ fun <A, B, C, D> curry(f: (A, B, C) -> D): (A) -> (B) -> (C) -> D = { a -> { b -
 
 Well, that's easy:
 ```kotlin
-Some(3) map _curry_(::tripleProduct) apply Some(5) apply Some(4)  
+Some(3) map curry(::tripleProduct) apply Some(5) apply Some(4)  
 // => Some(60)
 ```
 
@@ -142,7 +139,7 @@ Some(3) map _curry_(::tripleProduct) apply Some(5) apply Some(4)
 
 The third and final part is already available:
 
-[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 3/3**](https://aballano.github.io/kotlin-functors-applicatives-and-monads-in-pictures-part-3-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
+[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 3/3**](./kotlin-functors-applicatives-and-monads-in-pictures-part-3-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
 
 [![](https://cdn-images-1.medium.com/max/400/1*0hqOaABQ7XGPT-OYNgiUBg.png)](http://bit.ly/HackernoonFB)
 
