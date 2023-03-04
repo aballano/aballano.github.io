@@ -37,7 +37,7 @@ Simple enough. Lets extend this by saying that any value can be in a context. Fo
 
 Now when you apply a function to this value, you’ll get different results **depending on the context**. This is the idea that Functors, Applicatives, Monads, Arrows etc are all based on. The `Option` data type defines two related contexts:
 
-> **_Note:_** the pictures use Maybe (Just | None) from Haskell, which correspond to a custom Kotlin’s Option (Some | None) implementation.
+> **_Note:_** the pictures use `Maybe (Just | None)` from Haskell, which correspond to a custom Kotlin’s `Option (Some | None)` implementation.
 
 ![](https://cdn-images-1.medium.com/max/800/0*1NCb7mGijOSflxhO.png)
 ```kotlin
@@ -67,7 +67,7 @@ Option.Some(2).map(::sumThree)   // => Some(5)
 
 ### Just what is a Functor, really?
 
-A Functor is any type that defines how `map` (`fmap` in Haskell) applies to it. Here’s how `map`works:
+A Functor is any type that defines how `map` (`fmap` in Haskell) applies to it. Here’s how `map` works:
 
 ![](https://cdn-images-1.medium.com/max/800/0*egb47QB6zSr1jbl2.png)
 
@@ -94,7 +94,9 @@ So then you’re like, alright `map`, please apply `{ it + 3 }` to a `None`?
 
 ![](https://cdn-images-1.medium.com/max/800/0*w6a1JBnkBrpKlW1N.png)
 
-    Option.None.map { it + 3 }// => None
+```kotlin
+Option.None.map { it + 3 }// => None
+```
 
 ![](https://cdn-images-1.medium.com/max/800/0*HJUxTnL7aNTGmuG-.png)
 

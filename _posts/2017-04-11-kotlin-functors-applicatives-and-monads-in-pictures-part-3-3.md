@@ -13,9 +13,9 @@ published: true
 
 First of all, if you didn’t read the previous posts, go do so, otherwise you might be missing some essential concepts!
 
-[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 1/3**](./kotlin-functors-applicatives-and-monads-in-pictures-part-1-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
+[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 1/3**](kotlin-functors-applicatives-and-monads-in-pictures-part-1-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
 
-[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 2/3**](./kotlin-functors-applicatives-and-monads-in-pictures-part-2-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
+[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 2/3**](kotlin-functors-applicatives-and-monads-in-pictures-part-2-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
 
 ### Monads
 
@@ -37,7 +37,7 @@ Applicatives apply a wrapped function to a wrapped value:
 Monads apply a function that returns a wrapped value to a wrapped value. Monads have a function `flatMap` (`liftM` or `>>=` in Haskell) to do this.
 
 ```kotlin
-inline fun <B> flatMap(f: (A) -> Option<B>): Option<B> =   
+inline fun <A, B> Option<A>.flatMap(f: (A) -> Option<B>): Option<B> =   
     when (this) {  
         is None -> this  
         is Some -> f(value)  
@@ -62,7 +62,9 @@ What if we feed it a wrapped value?
 
 ![](https://cdn-images-1.medium.com/max/800/0*I66ezQb2qu243RLh.png)
 
-We need to use `flatMap` (`>>=` in Haskell) to shove our wrapped value into the function. Here’s a photo of `flatMap`:
+We need to use `flatMap` (`>>=` in Haskell) to shove our wrapped value into the function. 
+
+Here’s a photo of `flatMap`:
 
 ![](https://cdn-images-1.medium.com/max/800/0*MSDfsNNSfXqkXVYa.jpg)
 
@@ -78,8 +80,7 @@ None.flatMap(::half)
 What’s happening inside? Let’s look at `flatMap`'s (`>>=` in Haskell) signature again:
 
 ```kotlin
-// For Option
-inline fun <B> flatMap(f: (A) -> Option<B>): Option<B>
+inline fun <A, B> Option<A>.flatMap(f: (A) -> Option<B>): Option<B>
 ```
 
 ![](https://cdn-images-1.medium.com/max/800/0*G8_Zuhcn94-9OR0Z.png)
