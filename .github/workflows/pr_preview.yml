@@ -21,5 +21,7 @@ jobs:
       - name: Comment Pull Request
         uses: thollander/actions-comment-pull-request@v2.3.1
         with:
+          comment_tag: site-preview
+          reactions: rocket
           message: |
-            'URL ready:  ${{ steps.deploy.outputs.url }}'
+            URL ready at ${{ steps.deploy.outputs.url }}!
