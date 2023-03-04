@@ -13,9 +13,9 @@ published: true
 
 First of all, if you didn’t read the previous posts, go do so, otherwise you might be missing some essential concepts!
 
-[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 1/3**](kotlin-functors-applicatives-and-monads-in-pictures-part-1-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
+[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 1/3**]({{ site.baseurl }}/kotlin-functors-applicatives-and-monads-in-pictures-part-1-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
 
-[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 2/3**](kotlin-functors-applicatives-and-monads-in-pictures-part-2-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
+[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 2/3**](../kotlin-functors-applicatives-and-monads-in-pictures-part-2-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
 
 ### Monads
 
@@ -102,7 +102,7 @@ Some(20) flatMap ::half flatMap ::half flatMap ::half
 
 ![](https://cdn-images-1.medium.com/max/800/0*N-dZjxCsHwnK_KlT.png)
 
-> _Note: the original article now describes Haskell’s_ `_IO_` _Monad._ [_Kotlin_](https://hackernoon.com/tagged/kotlin) _doesn't have anything like that so this translation skips it._
+> _Note: the original article now describes Haskell’s_ `IO` _Monad._ [_Kotlin_](https://hackernoon.com/tagged/kotlin) _doesn't have anything like that so this translation skips it._
 
 ### Conclusion
 
