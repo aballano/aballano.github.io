@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reactive Functional Presenters: Handling Typing notifications.
+title: 'Reactive Functional Presenters: Handling Typing notifications.'
 categories:
   - RxJava
   - Android
