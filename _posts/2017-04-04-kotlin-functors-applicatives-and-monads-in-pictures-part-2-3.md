@@ -13,7 +13,7 @@ published: true
 
 First of all, if you didn't read the previous post, go do so, otherwise you might be missing some essential concepts!
 
-[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 1/3**](kotlin-functors-applicatives-and-monads-in-pictures-part-1-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
+[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 1/3**](../kotlin-functors-applicatives-and-monads-in-pictures-part-1-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
 
 ### Applicatives
 
@@ -144,7 +144,7 @@ Some(3) map curry(::tripleProduct) apply Some(5) apply Some(4)
 
 The third and final part is already available:
 
-[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 3/3**](kotlin-functors-applicatives-and-monads-in-pictures-part-3-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
+[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 3/3**](../kotlin-functors-applicatives-and-monads-in-pictures-part-3-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
 
 [![](https://cdn-images-1.medium.com/max/400/1*0hqOaABQ7XGPT-OYNgiUBg.png)](http://bit.ly/HackernoonFB)
 

@@ -164,7 +164,7 @@ So functions can be Functors too! When you use `map` on a function, you’re jus
 
 Want more? Go try applicatives in the second part!
 
-[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 2/3**](./kotlin-functors-applicatives-and-monads-in-pictures-part-2-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
+[**Kotlin Functors, Applicatives, And Monads in Pictures. Part 2/3**](../kotlin-functors-applicatives-and-monads-in-pictures-part-2-3/ "This is a translation of Functors, Applicatives, And Monads In Pictures from Haskell into Kotlin")
 
 [![](https://cdn-images-1.medium.com/max/400/1*0hqOaABQ7XGPT-OYNgiUBg.png)](http://bit.ly/HackernoonFB)
 
