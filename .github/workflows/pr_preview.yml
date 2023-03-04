@@ -19,5 +19,6 @@ jobs:
       - name: Comment Pull Request
         uses: thollander/actions-comment-pull-request@v2.3.1
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           message: |
             'URL ready:  ${{ steps.deploy.outputs.url }}'
