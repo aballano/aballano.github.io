@@ -10,7 +10,7 @@ jobs:
       - uses: actions/jekyll-build-pages@v1
       - name: Deploy via GoStatic
         id: deploy
-        uses: DigitalSVN/GoStatic@v1.0
+        uses: DigitalSVN/GoStatic@v1.1
         with:
           api-token: ${{ secrets.GOSTATIC_API_TOKEN }}
           source-dir: './_site'
