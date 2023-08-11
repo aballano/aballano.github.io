@@ -17,7 +17,7 @@ jobs:
       - name: Output the deployment URL
         run: echo "URL ${{ steps.deploy.outputs.url }}"
       - name: Comment Pull Request
-        uses: thollander/actions-comment-pull-request@v2.3.1
+        uses: thollander/actions-comment-pull-request@v2.4.2
         with:
           comment_tag: site-preview
           reactions: rocket
