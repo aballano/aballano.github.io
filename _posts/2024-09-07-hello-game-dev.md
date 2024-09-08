@@ -61,7 +61,10 @@ Ok, so I've got a goal, basic mechanics that I would have to spice up, and a rel
 
 I was advised several times that writing things down makes the process easier, and I agree. I already overdid in the past involving multiple tools that I was not used to and it ended up being too overwhelming.
 
+<image width=200 src="https://raw.githubusercontent.com/aballano/aballano.github.io/master/images/gdd.png" />
+
 A GDD is a template you can get from multiple places (ping me on Twitter and I can share the one I used, although it is pretty basic). The idea is to define your game in different sections so it's easy to do a document-code-code-document or whatever combination works for you but in an iterative way. I write parts of the Story when I'm inspired or get ideas, and the same goes for pretty much anything, few times I switch to writing when I'm kinda done with coding and I'm just looking for things to refactor with no real purpose, like "ey, you seem lost, what about reading your own ideas and adding stuff to it that you can create?"
+
 
 ### Art and visuals
 
