@@ -32,8 +32,8 @@ Even ignoring all the social media news regarding Unity's actions and so, **Godo
 
 Ok, so having the game engine decided, the rest of the tools are also relatively personal and situational, but I went with the following:
 
-* Git for version control, Fork as visual Git Client. I always set at least a local project I can commit to if I'm drafting something but this time I also wanted to code from different devices so I created a private Github repo too.
-* Procreate/Krita as image editor. 
+* **Git** for version control, Fork as visual Git Client. I always set at least a local project I can commit to if I'm drafting something but this time I also wanted to code from different devices so I created a private Github repo too.
+* **Procreate/Krita** as image editor. 
   * Procreate is just amazing, but you need an iPad with the pen, and it is a one-time payment, which I find really worth it after you learn to use the tool.
   * Krita is free and works perfectly for most cases. I would probably explore Aseprite (paid) in the future as I heard very good things about it, especially for animations.
 
@@ -45,35 +45,44 @@ The first thing really is to **get used to** the game engine, so I did a couple 
 
 Next, you need an **idea**, and this is the really hard part. From a mobile dev perspective, it's relatively "easy" to come up with ideas depending on what's your target: maybe you want to create an app to solve a problem (tools, automation, files apps, etc) or you want to create a product from that or from another idea of a service you think people would like to pay for.
 
-But an idea for a game has been something much more challenging for me to come up with. The reason is simple: Obviously, because games are not regular business apps, but mainly because I do this as a hobby, so I want to make something relatively original and curated in a way that is pleasant for others to play. I found this to be moving more to a role of writer/director sometimes rather than a programmer, and it turns out it's fun! (and challenging).
+But an idea for a game has been something much more challenging for me to come up with. The reason is simple: Obviously, because games are not regular business apps, but mainly because I do this as a hobby, so I want to make something **relatively original and curated** in a way that is pleasant for others to play. I found this to be like moving more to a role of writer/director sometimes rather than a programmer, and it turns out it's fun! (and challenging).
 
-Additionally, it's very easy to fall into the trap of overscoping, or worse: looking at what other people do... I can tell you already: people create and share a lot of things and a lot of what you'll see is amazing creations of people who worked very hard for a long time to reach that point, and oh boy is that discouraging sometimes. You just have to follow a bit of the Indie game dev community in Twitter to see this and other typical issues that most people encounter.
+Additionally, it's very easy to fall into the trap of **overscoping**, or worse: looking at what other people do... I can tell you already: people create and share a lot of things and a lot of what you'll see is amazing creations of people who worked very hard for a long time to reach that point, and oh boy is that discouraging sometimes. You just have to follow a bit of the Indie game dev community in Twitter to see this and other typical issues that most people encounter. As with many crafts, you might want to look at others for inspiration but try to have your goal in mind and don't get lost in things like how successful can be, if you need to add super beautiful details and animations, and so.
 
 ### Reducing scope
 
 In my case, I wanted to create an adventure game, with a short story that any friend could play. The idea would be as simple as setting the player on a small island with 3-4 areas with the task of finding a **ruler** for it. Despite my big love for RPG games, I don't think I'm ready to fall into that trap yet, so this time I decided to create a game where you would mainly **talk** your way out of things, so no combat expected.
 
-I found that reducing scope is a great way of achieving more and lets you work in an MVP (minimal viable product) way much easier. But it also presents some problems, as scoping too small can leave you with something that is not fun to play, so the process should be iterable.
+I found that reducing scope is a great way of achieving more and lets you work in an MVP (minimal viable product) much easier. But it also presents some problems, as scoping too small can leave you with something that is not fun to play, so the process should be **iterable**: start small in an MVP-way and keep adding stuff to it bit by bit.
 
-Ok, so I've got a goal, basic mechanics that I would have to spice up, and a relatively small scope. Time to do the boring but one of the most important parts: documenting...
+Ok, so I've got a goal, basic mechanics that I would have to spice up, and a relatively small scope. Time to do the "boring" but one of the most important parts: documenting...
 
 ### GDD - Game Design Document
 
-I was advised several times that writing things down makes the process easier, and I agree. I already overdid in the past involving multiple tools that I was not used to and it ended up being too overwhelming.
+I was advised several times that writing things down makes the process easier, and I agree. I already overdid this in the past involving multiple tools that I was not used to and it ended up being too overwhelming. So this time I decided to open up a simple Google doc and copy a GDD template with some predefined sections:
 
 <image width=200 src="https://raw.githubusercontent.com/aballano/aballano.github.io/master/images/gdd.png" />
 
-A GDD is a template you can get from multiple places (ping me on Twitter and I can share the one I used, although it is pretty basic). The idea is to define your game in different sections so it's easy to do a document-code-code-document or whatever combination works for you but in an iterative way. I write parts of the Story when I'm inspired or get ideas, and the same goes for pretty much anything, few times I switch to writing when I'm kinda done with coding and I'm just looking for things to refactor with no real purpose, like "ey, you seem lost, what about reading your own ideas and adding stuff to it that you can create?"
+A **GDD** is a document you can get from multiple places, ping me on Twitter and I can share the template I used, although it is pretty basic. 
+
+The idea is to define your game in different sections so it's easy to do a document-code-code-document (in my case) or whatever combination works for you but, again, in an **iterative** way. I write parts of the Story when I'm inspired or get ideas that I should definitely not implement right now, and the same goes for pretty much anything, few times I switch to writing when I'm kinda done with coding and I'm just looking for things to refactor with no real purpose, like "ey, you seem lost, what about reading your own ideas and adding stuff to it that you can create?"
+
+And it's something that definitely becomes easier with the time.
 
 
 ### Art and visuals
 
-For the art I chose 2D, pixel art, and top-down style so I searched for some sprites and PJs from Itch.io that I would start using at least for now. Picking sprites is tricky, because you may want to start over scoping and thinking about all the items you might need and then realize that there's no pack with everything you need, even less free, and mixing packs is a no-go for visual consistency. 
+For the art I chose 2D, pixel art, and top-down style so I searched for some sprites and PJs from **Itch.io** that I would start using at least for now. Picking sprites is tricky, because you may want to start over scoping and thinking about all the items you might need and then realize that there's no pack with everything you need, even less free, and mixing same-type packs is a no-go for visual consistency. 
 
-In my case, I started doing an RPG game tutorial and I got some sprites in it that I used for the player and first map until I decided to switch to a limited free set that was much better visually. My idea would be to use as much as I can and, in the future, use those assets as a base to create new ones on my own.
+In my case, I started doing an RPG game tutorial and I got some sprites in it that I used for the player and first map until I decided to switch to a limited free set that was much better visually. My idea would be to use as much as I can and, in the future, use those assets as a base to **create new ones on my own**.
 
 Again, my advice would be to pick up whatever works and start with it, once the game is in shape and with clearer goals is easy to switch to different graphics and add better details.
 
+## Takeaways
+
+* **Scope**: Don't let perfection ruin a good thing. Nothing may be good enough at the beginning but is better to have a mediocre project finished than a perfect project to be done.
+* **Iterate**: on decisions, upgrades, refactors, etc., but with baby steps and with a purpose.
+* **Document**: everything! Ideally before implementing (yes, I'm looking at you/myself and at that "amazing mechanic that will be super fun but overly complicated to implement right now").
 
 ---
 
