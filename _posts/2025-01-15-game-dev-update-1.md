@@ -10,14 +10,14 @@ categories:
 published: true
 ---
 
-![](aballano.github.io/images/Godot_logo_u1.svg "Godot logo")
+[[aballano.github.io/images/Godot_logo_u1.svg|"Godot logo"]]
 
 ---
 
 It was time to do a Gamedev update!
 
 
-I'm gonna do a quick recap on what I've been doing for the past 5 months.
+I'm gonna do a quick recap on what I've been doing for the past 5 months, including some learnings.
 
 
 # My game idea
