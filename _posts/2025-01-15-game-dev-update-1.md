@@ -10,7 +10,7 @@ categories:
 published: true
 ---
 
-[[aballano.github.io/images/Godot_logo_u1.svg|"Godot logo"]]
+![](https://raw.githubusercontent.com/aballano/aballano.github.io/master/images/Godot_logo_u1.svg "Godot logo")
 
 ---
 
