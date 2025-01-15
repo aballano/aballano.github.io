@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gamedev Update #1
+title: Gamedev Update 1
 categories:
   - Gamedev
   - Godot
@@ -10,7 +10,7 @@ categories:
 published: true
 ---
 
-![](https://raw.githubusercontent.com/aballano/aballano.github.io/master/images/Godot_logo_u1.svg "Godot logo")
+![](aballano.github.io/images/Godot_logo_u1.svg "Godot logo")
 
 ---
 
