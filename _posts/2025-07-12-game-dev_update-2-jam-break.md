@@ -15,9 +15,9 @@ published: true
 ---
 
 
-Hey everyone! It's been some months since my last post on the main project  which you can find [here](https://aballano.github.io/game-dev-update-1/):
+Hey everyone! It's been some months since my last post on the main project which you can find [here](https://aballano.github.io/game-dev-update-1/).
 
-The reason for this post is no other than me taking a small break from it because I joined a game jam with three friends that ended in May. The main thing for me is to actually ship a smaller project and learn from doing that. This jam was a good chance to try integrating AI into how I make games.
+The reason for this post is no other than me taking a small break from it because I joined a game jam with three friends that ended in May. The main goal for me was to actually ship a smaller project and learn from doing that. This jam was also a good chance to try integrating AI into how I make games.
 
 
 # Into the Jam: A "Viral" quest and a dummy game
@@ -25,6 +25,7 @@ The reason for this post is no other than me taking a small break from it becaus
 The jam was two months long, and the goal was to make a game "viral", basically, get as many visits as possible. I was allowed to use a tiny JavaScript project I made a few days before using Gemini on the web. It's a water-drinking incremental game. Yes, as dummy as it sounds. Why Gemini, why web, and why JavaScript? Don't ask, it was just a proof of concept, but I liked the game idea.
 
 So I iterated on it, polished as many details as I could, and posted it as a prototype on [itch.io](https://aballano.itch.io/water-drinking-incremental). I also published it on [incrementaldb](https://www.incrementaldb.com/game/drink-water) for extra views. 
+
 As of July 12th, 2025, it got 9300 Views and 6800 browser plays. And I'm honestly shocked! I didn't expect nearly that many views.
 
 The game got mixed-positive reactions: +83/-50 on incrementaldb with 12 reviews (58% recommended). Even though I marked it as a prototype on the page, I noticed it wasn't obvious enough in the game. A lot of negative reviews talk about lack of content or the game being too short. I should have probably added a dialog at the game start. Positive reviews liked the concept and the aquarium details, which was nice. The best thing is that many reviews, both negative and positive, had great ideas and most feedback was very constructive!
@@ -59,6 +60,8 @@ This is *when* I decide to use AI for a feature, which is not always the case, m
 
 # How It's Going and Key Learnings
 
+The new update got a good reception, both between my friends and colleagues from my work. There are some perf issues in certain points and some things could be improved, but I'm quite happy with the result so far. I also got many ideas for future updates but will see if I got the chance to work on it in the future.
+
 So, that's what I've learned trying to use AI in this jam. It started a bit messy, but it's been a good learning experience. The "Water Drinking Incremental" game, now in Godot, is coming along much better. And I'm actually enjoying making it this way, with code I can be happy with.
 
 A few key things I've learned:
@@ -68,7 +71,11 @@ A few key things I've learned:
 4. AI helps, it doesn't replace you: It's good for speeding things up, but you still need to know what you're doing.
 5. Consistent code helps the AI: If your code is neat, the AI does better.
 6. Owning your project feels good: It's satisfying to make something you're proud of.
+7. Timing matters! Plan when you want to release your game and publish it in alternative sites.
 
 This experience showed me that AI assistants reflect how you work. If you're organized and clear, they can be a great help.
 
-What about you? Used AI in your gamedev projects? Any experiences or tips? 
+
+# What's next?
+
+Well I would normally go back to the main project (tm) but of course after finishing this game I'm now more invested into incremental games, so I might explore some ideas before I go back to it :)
