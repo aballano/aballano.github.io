@@ -48,10 +48,10 @@ As a developer with some experience, the process of telling an AI what to do wit
 I then decided to port the game to Godot and tweak the process with AI:
 * I start with VS Code with GitHub Copilot integration. There I used Claude 3.7, though I don't have a strong opinion on which AI is best now. From VS Code, I have a Godot plugin that lets me open Godot and link the session, which is handy.
 * After initialization, I do what Software Engineers do: planning. What do I want to do now? I pick something and think about how I would implement it.
-* Then I open the chat and write it down in a very descriptive way, step-by-step. I try to be precise but without losing time specifying exact names for references.
+* Then I open the chat and write it down in a very descriptive way, step-by-step. I try to be precise but without wasting time specifying exact names for references.
 * I read the prompt, make adjustments, and send it.
 * I might take a quick break. When I'm back, all changes are presented, and I use Git to review them, almost like a Pull Request, but more like a dummy coding partner.
-Now, the review. From my experience, 90% of the time the prompt is the cause of any errors or things not done well in the code. You have to be very explicit. LLMs don't know about clean code, functional programming, or anything if you don't tell them to. But the more consistent your code is, the easier it is for them to adapt new code to it.
+* Now, the review. From my experience, 90% of the time the prompt is the cause of any errors or things not done well in the code. You have to be very explicit. LLMs don't know about clean code, functional programming, or anything if you don't tell them to. But the more consistent your code is, the easier it is for them to adapt new code to it.
 * After reviewing, I might make the changes myself or ask the AI to iterate on the fixes, depending on the situation.
 * When the process is done, I might go to set up some screens manually. The AI can describe how to do it, but it's not as easy without something like an MCP server for Godot.
 * Scene done, time to test. Run the game and... surprisingly, most of the time it runs and works like a charm. Other few times, it's back to the chat to iterate.
@@ -60,9 +60,9 @@ This is *when* I decide to use AI for a feature, which is not always the case, m
 
 # How It's Going and Key Learnings
 
-The new update got a good reception, both between my friends and colleagues from my work. There are some perf issues in certain points and some things could be improved, but I'm quite happy with the result so far. I also got many ideas for future updates but will see if I got the chance to work on it in the future.
+The new update got a good reception, both among my friends and colleagues from my work. There are some perf issues in certain points and some things could be improved, but I'm quite happy with the result so far. I also got many ideas for future updates but will see if I got the chance to work on it in the future.
 
-So, that's what I've learned trying to use AI in this jam. It started a bit messy, but it's been a good learning experience. The "Water Drinking Incremental" game, now in Godot, is coming along much better. And I'm actually enjoying making it this way, with code I can be happy with.
+So, that's what I've learned trying from using AI in this jam. It started a bit messy, but it's been a good learning experience. The "Water Drinking Incremental" game, now in Godot, is coming along much more smoothly. And I'm actually enjoying making it this way, with code I can be happy with.
 
 A few key things I've learned:
 1. Plan first: Figure out what you want to do before you ask the AI. Unless you're brainstorming.
@@ -78,4 +78,4 @@ This experience showed me that AI assistants reflect how you work. If you're org
 
 # What's next?
 
-Well I would normally go back to the main project (tm) but of course after finishing this game I'm now more invested into incremental games, so I might explore some ideas before I go back to it :)
+Well I would normally get back to the main project (tm)... but of course after finishing this game I'm now more invested into incremental games, so I might explore some ideas before I go back to it :)
